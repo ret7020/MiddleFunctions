@@ -75,14 +75,69 @@ bool itc_mirror_num(long long number){
     return rev == number;
 }
 
-int itc_second_max_num(long long number){
-    int first_max = -1, second_max = -1;
-    while (number > 0){
-        if (number % 10 > first_max)
-            first_max = number % 10;
-        if (number % 10 <= first_max && number % 10 > second_max)
-            second_max = number % 10;
+int itc_second_max_num(long long number) {
+    if (number < 10)
+        return -1;
+    int max1 = -1, max2 = -1;
+    int tmp;
+    while (number > 0) {
+        tmp = number % 10;
+        if (tmp >= max1) {
+            max2 = max1;
+            max1 = tmp;
+        } else if (tmp > max2 && tmp != max1)
+            max2 = tmp;
         number /= 10;
     }
-    return second_max;
+    return max2;
+}
+
+int itc_second_simple_max_num(long long number) {
+    if (number < 10)
+        return -1;
+    int max1 = -1, max2 = -1;
+    int tmp;
+    while (number > 0) {
+        tmp = number % 10;
+        if (tmp >= max1) {
+            max2 = max1;
+            max1 = tmp;
+        } else if (tmp > max2 && tmp != max1)
+            max2 = tmp;
+        number /= 10;
+    }
+    if (max1 == max2)
+        return -1;
+    return max2;
+}
+
+long long itc_bin_num(long long number){
+    long long t = 1;
+    while(number)
+    {
+        t *= 10;
+        t += (number % 2);
+        number /= 2;
+    }
+    return itc_rev_num(t) / 10;
+}
+
+long long itc_oct_num(long long number){
+    long long t = 1;
+    while(number)
+    {
+        t *= 10;
+        t += (number % 8);
+        number /= 8;
+    }
+    return itc_rev_num(t) / 10;
+}
+
+
+int itc_rev_bin_num(long long number){
+    int res = 0, counter = 0;
+    while (number > 0){
+        res += counter * number;
+        counter ++;
+    }
 }
