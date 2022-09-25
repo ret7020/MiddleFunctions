@@ -7,6 +7,6 @@
 using namespace  std;
 int main(){
 
-    cout << itc_oct_num(162);
+    cout << itc_rev_covert_num(10110100101, 2) ;
     return 0;
 }

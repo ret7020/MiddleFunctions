@@ -49,15 +49,36 @@ cmake_ninja_workdir = /home/stephan/Progs/Cpp/MiddleFunctions/cmake-build-debug/
 
 build cmake_object_order_depends_target_MiddleFunctions: phony || CMakeFiles/MiddleFunctions.dir
 
-build CMakeFiles/MiddleFunctions.dir/first.cpp.o: CXX_COMPILER__MiddleFunctions_Debug /home/stephan/Progs/Cpp/MiddleFunctions/first.cpp || cmake_object_order_depends_target_MiddleFunctions
-  DEP_FILE = CMakeFiles/MiddleFunctions.dir/first.cpp.o.d
+build CMakeFiles/MiddleFunctions.dir/main.cpp.o: CXX_COMPILER__MiddleFunctions_Debug /home/stephan/Progs/Cpp/MiddleFunctions/main.cpp || cmake_object_order_depends_target_MiddleFunctions
+  DEP_FILE = CMakeFiles/MiddleFunctions.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++14
   INCLUDES = -I/home/stephan/Progs/Cpp/MiddleFunctions/.
   OBJECT_DIR = CMakeFiles/MiddleFunctions.dir
   OBJECT_FILE_DIR = CMakeFiles/MiddleFunctions.dir
 
-build CMakeFiles/MiddleFunctions.dir/main.cpp.o: CXX_COMPILER__MiddleFunctions_Debug /home/stephan/Progs/Cpp/MiddleFunctions/main.cpp || cmake_object_order_depends_target_MiddleFunctions
-  DEP_FILE = CMakeFiles/MiddleFunctions.dir/main.cpp.o.d
+build CMakeFiles/MiddleFunctions.dir/f_1_5.cpp.o: CXX_COMPILER__MiddleFunctions_Debug /home/stephan/Progs/Cpp/MiddleFunctions/f_1_5.cpp || cmake_object_order_depends_target_MiddleFunctions
+  DEP_FILE = CMakeFiles/MiddleFunctions.dir/f_1_5.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/stephan/Progs/Cpp/MiddleFunctions/.
+  OBJECT_DIR = CMakeFiles/MiddleFunctions.dir
+  OBJECT_FILE_DIR = CMakeFiles/MiddleFunctions.dir
+
+build CMakeFiles/MiddleFunctions.dir/f_5_10.cpp.o: CXX_COMPILER__MiddleFunctions_Debug /home/stephan/Progs/Cpp/MiddleFunctions/f_5_10.cpp || cmake_object_order_depends_target_MiddleFunctions
+  DEP_FILE = CMakeFiles/MiddleFunctions.dir/f_5_10.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/stephan/Progs/Cpp/MiddleFunctions/.
+  OBJECT_DIR = CMakeFiles/MiddleFunctions.dir
+  OBJECT_FILE_DIR = CMakeFiles/MiddleFunctions.dir
+
+build CMakeFiles/MiddleFunctions.dir/10_15.cpp.o: CXX_COMPILER__MiddleFunctions_Debug /home/stephan/Progs/Cpp/MiddleFunctions/10_15.cpp || cmake_object_order_depends_target_MiddleFunctions
+  DEP_FILE = CMakeFiles/MiddleFunctions.dir/10_15.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/stephan/Progs/Cpp/MiddleFunctions/.
+  OBJECT_DIR = CMakeFiles/MiddleFunctions.dir
+  OBJECT_FILE_DIR = CMakeFiles/MiddleFunctions.dir
+
+build CMakeFiles/MiddleFunctions.dir/15_18.cpp.o: CXX_COMPILER__MiddleFunctions_Debug /home/stephan/Progs/Cpp/MiddleFunctions/15_18.cpp || cmake_object_order_depends_target_MiddleFunctions
+  DEP_FILE = CMakeFiles/MiddleFunctions.dir/15_18.cpp.o.d
   FLAGS = -g -std=gnu++14
   INCLUDES = -I/home/stephan/Progs/Cpp/MiddleFunctions/.
   OBJECT_DIR = CMakeFiles/MiddleFunctions.dir
@@ -71,7 +92,7 @@ build CMakeFiles/MiddleFunctions.dir/main.cpp.o: CXX_COMPILER__MiddleFunctions_D
 #############################################
 # Link the executable MiddleFunctions
 
-build MiddleFunctions: CXX_EXECUTABLE_LINKER__MiddleFunctions_Debug CMakeFiles/MiddleFunctions.dir/first.cpp.o CMakeFiles/MiddleFunctions.dir/main.cpp.o
+build MiddleFunctions: CXX_EXECUTABLE_LINKER__MiddleFunctions_Debug CMakeFiles/MiddleFunctions.dir/main.cpp.o CMakeFiles/MiddleFunctions.dir/f_1_5.cpp.o CMakeFiles/MiddleFunctions.dir/f_5_10.cpp.o CMakeFiles/MiddleFunctions.dir/10_15.cpp.o CMakeFiles/MiddleFunctions.dir/15_18.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/MiddleFunctions.dir
   POST_BUILD = :
