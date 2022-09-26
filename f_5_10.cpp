@@ -13,8 +13,8 @@ int itc_min_num(long long number){
     }
     return min;
 }
-int itc_rev_num(long long number){
-    int num = 0;
+long long itc_rev_num(long long number){
+    long long num = 0;
     while (number > 0){
         num = num * 10 + number % 10;
         number /= 10;
