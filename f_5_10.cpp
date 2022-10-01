@@ -4,25 +4,39 @@
 #include "middle.h"
 
 
-int itc_min_num(long long number){
+int itc_min_num(long long number) {
     int min = 10;
-    while (number > 9){
-        if (number % 10 < min)
+    if (number == 0)
+        return 0;
+
+    if (number < 0)
+        number *= -1;
+    while (number > 0) {
+        if (number % 10 < min) {
             min = number % 10;
+        }
         number /= 10;
     }
     return min;
 }
 long long itc_rev_num(long long number){
     long long num = 0;
+    if (number < 0)
+        number *= -1;
     while (number > 0){
         num = num * 10 + number % 10;
         number /= 10;
     }
     return num;
 }
+
 int itc_null_count(long long number){
     int zeros_cnt = 0;
+    if (number == 0)
+        return 1;
+
+    if (number < 0)
+        number *= -1;
     while (number > 0){
         if (number % 10 == 0)
             zeros_cnt++;
