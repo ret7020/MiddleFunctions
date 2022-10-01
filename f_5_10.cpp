@@ -32,8 +32,7 @@ int itc_null_count(long long number){
 }
 
 bool itc_mirror_num(long long number){
-    int rev = itc_rev_num(number);
-    return rev == number;
+    return itc_rev_num(number) == number;
 }
 
 int itc_second_max_num(long long number) {
