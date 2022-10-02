@@ -39,6 +39,7 @@ long long itc_multi_num(long long number) {
     if (number < 0)
         number *= -1;
     while (number > 0) {
+        //std::cout << mp * (number % 10) << std::endl;
         mp *= number % 10;
         number /= 10;
     }

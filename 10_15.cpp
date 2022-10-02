@@ -30,7 +30,7 @@ long long itc_bin_num(long long number){
         t += (number % 2);
         number /= 2;
     }
-    return itc_rev_num(t) / 10;
+    return itc_reverse_num(t) / 10;
 }
 
 long long itc_oct_num(long long number){
@@ -41,7 +41,7 @@ long long itc_oct_num(long long number){
         t += (number % 8);
         number /= 8;
     }
-    return itc_rev_num(t) / 10;
+    return itc_reverse_num(t) / 10;
 }
 
 double itc_pow(int num, int step) {

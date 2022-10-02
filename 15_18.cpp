@@ -21,7 +21,7 @@ int itc_covert_num(long long number, int ss){
         t += (number % ss);
         number /= ss;
     }
-    return itc_rev_num(t) / 10;
+    return itc_reverse_num(t) / 10;
 
 }
 int itc_rev_covert_num(long long number, int ss){
@@ -33,4 +33,23 @@ int itc_rev_covert_num(long long number, int ss){
     }
     return res;
 
+}
+
+long long itc_reverse_num(long long number){
+    long long num = 0;
+    if (number < 0)
+        number *= -1;
+    while (number > 0){
+        num = num * 10 + number % 10;
+        number /= 10;
+    }
+    return num;
+}
+int itc_mirror_count(long long number){
+    int count = 0;
+    for (long long i = 1; i <= number; ++i){
+        if (itc_mirror_num(i))
+            count++;
+    } 
+    return count;
 }

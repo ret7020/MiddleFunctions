@@ -3,7 +3,6 @@
 //
 #include "middle.h"
 
-
 int itc_min_num(long long number) {
     int min = 10;
     if (number == 0)
@@ -19,16 +18,10 @@ int itc_min_num(long long number) {
     }
     return min;
 }
-long long itc_rev_num(long long number){
-    long long num = 0;
-    if (number < 0)
-        number *= -1;
-    while (number > 0){
-        num = num * 10 + number % 10;
-        number /= 10;
-    }
-    return num;
+int itc_rev_num(long long number){
+    return itc_len_num(itc_reverse_num(number));
 }
+
 
 int itc_null_count(long long number){
     int zeros_cnt = 0;
@@ -46,7 +39,7 @@ int itc_null_count(long long number){
 }
 
 bool itc_mirror_num(long long number){
-    return itc_rev_num(number) == number;
+    return itc_reverse_num(number) == number;
 }
 
 int itc_second_max_num(long long number) {
