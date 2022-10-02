@@ -45,6 +45,7 @@ long long itc_multi_num(long long number) {
     return mp;
 }
 
+
 int itc_max_num(long long number) {
     int max = -1;
     if (number == 0)

@@ -22,8 +22,8 @@ int itc_covert_num(long long number, int ss){
         number /= ss;
     }
     return itc_reverse_num(t) / 10;
-
 }
+
 int itc_rev_covert_num(long long number, int ss){
     long long res = 0, degree_mutiplier = 0;
     while (number > 0){

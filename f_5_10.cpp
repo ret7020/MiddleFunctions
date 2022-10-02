@@ -43,18 +43,17 @@ bool itc_mirror_num(long long number){
 }
 
 int itc_second_max_num(long long number) {
-    if (number < 10)
-        return -1;
-    int max1 = -1, max2 = -1;
-    int tmp;
-    while (number > 0) {
-        tmp = number % 10;
-        if (tmp >= max1) {
-            max2 = max1;
-            max1 = tmp;
-        } else if (tmp > max2 && tmp != max1)
-            max2 = tmp;
-        number /= 10;
+    int max = itc_max_num(number);
+    int second_max = 0;
+    int second;
+    if(number < 0)
+        number = -number;
+    while(number>0){
+        if(second_max < number % 10 && number % 10 != max)
+            second_max = number % 10;
+        if(number % 10 == max)
+            max = 10;
+        number = number / 10;
     }
-    return max2;
+    return second_max;
 }
